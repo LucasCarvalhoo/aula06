@@ -1,4 +1,4 @@
-.login-container{
+.login-container {
     background-color: var(--card-bg);
     width: 100%;
     max-width: 420px;
@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-.login-container::before{
+.login-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -19,24 +19,29 @@
     background: linear-gradient(90deg, var(--primary-color), #9c88ff);
 }
 
-header{
-    margin-top: 2rem;
+header {
+    margin-bottom: 2rem;
     text-align: center;
 }
 
-h1{
+h1 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
 }
 
-.subtitle{
+.subtitle {
     color: var(--text-secundary);
     font-size: 0.95rem;
 }
 
-label{
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+label {
     display: flex;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
@@ -44,11 +49,11 @@ label{
     font-weight: 500;
 }
 
-.input-group{
+.input-group {
     position: relative;
 }
 
-label{
+input {
     width: 100%;
     padding: 1rem;
     background-color: var(--input-bg);
@@ -56,5 +61,16 @@ label{
     border-radius: var(--border-radius);
     color: var(--text-primary);
     font-size: 1rem;
-    transition: var(--transition);
+    transition: var(--transition); 
+}
+
+input:focus{
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+input::placeholder {
+    color: var(--text-secundary);
+    opacity: 0.7;
 }
